@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#06070b" />
+    <meta
+      name="description"
+      content="Northwind — The operating system for modern finance. Banking, treasury, cards, and AI-powered insights on one institutional-grade platform."
+    />
+    <title>Northwind — The operating system for modern finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2300d68f'/%3E%3Cpath d='M9 22V10h2.4l9.2 8.2V10H23v12h-2.4l-9.2-8.2V22z' fill='%23061117'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <!-- ============== Navigation ============== -->
+    <header class="nav" id="nav">
+      <a href="#" class="nav__brand" aria-label="Northwind home">
+        <span class="nav__logo">
+          <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00d68f" />
+                <stop offset="100%" stop-color="#26ffd0" />
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="8" fill="url(#lg)" />
+            <path d="M9 22V10h2.4l9.2 8.2V10H23v12h-2.4l-9.2-8.2V22z" fill="#061117" />
+          </svg>
+        </span>
+        <span class="nav__word">Northwind</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <a href="#products">Products</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#security">Security</a>
+        <a href="#customers">Customers</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#login" class="link-muted">Sign in</a>
+        <a href="#start" class="btn btn--primary btn--sm">
+          Open an account
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============== Hero ============== -->
+      <section class="hero">
+        <div class="hero__inner">
+          <a href="#changelog" class="pill" data-reveal>
+            <span class="pill__dot"></span>
+            <span>New</span>
+            <span class="pill__divider"></span>
+            <span>Northwind AI &mdash; treasury copilot is live</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
+          <h1 class="hero__title" data-reveal>
+            The operating system for
+            <span class="serif italic accent">modern finance.</span>
+          </h1>
+
+          <p class="hero__sub" data-reveal>
+            Banking, treasury, corporate cards, and intelligent spend &mdash;
+            unified on an institutional-grade platform. Built for finance teams
+            that move first.
+          </p>
+
+          <div class="hero__cta" data-reveal>
+            <a href="#start" class="btn btn--primary">
+              Open an account
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#demo" class="btn btn--ghost">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+              Watch the 90-second tour
+            </a>
+          </div>
+
+          <div class="hero__meta" data-reveal>
+            <div class="hero__meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2l3 6 6 1-4.5 4.5L18 21l-6-3-6 3 1.5-7.5L3 9l6-1z" fill="#00d68f" />
+              </svg>
+              SOC 2 Type II &middot; ISO 27001
+            </div>
+            <div class="hero__meta-item">FDIC insured up to $5M</div>
+            <div class="hero__meta-item">4.9% APY on idle cash</div>
+          </div>
+        </div>
+
+        <!-- ============== Dashboard Mock ============== -->
+        <div class="dashboard" data-reveal>
+          <div class="dashboard__chrome">
+            <span class="dashboard__dot dashboard__dot--r"></span>
+            <span class="dashboard__dot dashboard__dot--y"></span>
+            <span class="dashboard__dot dashboard__dot--g"></span>
+            <div class="dashboard__url">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm-3 8V6a3 3 0 016 0v3H9z" fill="currentColor" />
+              </svg>
+              app.northwind.finance / treasury
+            </div>
+          </div>
+
+          <div class="dashboard__body">
+            <aside class="dashboard__side">
+              <div class="dashboard__org">
+                <div class="dashboard__org-badge">A</div>
+                <div>
+                  <div class="dashboard__org-name">Atlas Robotics</div>
+                  <div class="dashboard__org-sub">Workspace</div>
+                </div>
+              </div>
+              <nav class="dashboard__nav">
+                <div class="dashboard__nav-item active">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M3 12l9-9 9 9M5 10v10h14V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Overview
+                </div>
+                <div class="dashboard__nav-item">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg>
+                  Accounts
+                </div>
+                <div class="dashboard__nav-item">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 12h12M9 17h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                  Treasury
+                </div>
+                <div class="dashboard__nav-item">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg>
+                  Cards
+                </div>
+                <div class="dashboard__nav-item">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M5 9l7-7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Transfers
+                </div>
+                <div class="dashboard__nav-item">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                  Insights
+                </div>
+              </nav>
+            </aside>
+
+            <div class="dashboard__main">
+              <div class="dashboard__head">
+                <div>
+                  <div class="dashboard__eyebrow">Total balance</div>
+                  <div class="dashboard__balance">
+                    $<span data-count="48241932">0</span><span class="dashboard__balance-cents">.18</span>
+                  </div>
+                  <div class="dashboard__delta">
+                    <span class="chip chip--up">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      +$1.24M
+                    </span>
+                    <span class="muted">vs. last 30 days &middot; +12.4%</span>
+                  </div>
+                </div>
+                <div class="dashboard__range">
+                  <button>1D</button>
+                  <button>1W</button>
+                  <button class="active">1M</button>
+                  <button>3M</button>
+                  <button>1Y</button>
+                  <button>All</button>
+                </div>
+              </div>
+
+              <div class="chart" aria-hidden="true">
+                <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#00d68f" stop-opacity="0.35" />
+                      <stop offset="100%" stop-color="#00d68f" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="cl" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#26ffd0" />
+                      <stop offset="100%" stop-color="#00d68f" />
+                    </linearGradient>
+                  </defs>
+                  <g class="chart__grid">
+                    <line x1="0" y1="40" x2="600" y2="40" />
+                    <line x1="0" y1="90" x2="600" y2="90" />
+                    <line x1="0" y1="140" x2="600" y2="140" />
+                  </g>
+                  <path
+                    class="chart__area"
+                    d="M0,150 C40,140 70,120 110,118 C160,116 190,135 230,128 C275,120 305,80 350,72 C395,64 425,95 470,80 C515,65 540,42 600,28 L600,200 L0,200 Z"
+                    fill="url(#cf)"
+                  />
+                  <path
+                    class="chart__line"
+                    d="M0,150 C40,140 70,120 110,118 C160,116 190,135 230,128 C275,120 305,80 350,72 C395,64 425,95 470,80 C515,65 540,42 600,28"
+                    fill="none"
+                    stroke="url(#cl)"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                  />
+                  <g class="chart__pt">
+                    <circle cx="470" cy="80" r="4.5" fill="#00d68f" />
+                    <circle cx="470" cy="80" r="10" fill="#00d68f" opacity="0.18" />
+                  </g>
+                </svg>
+                <div class="chart__tooltip" style="left: 78%;">
+                  <div class="chart__tooltip-date">May 14</div>
+                  <div class="chart__tooltip-val">$47,118,402.12</div>
+                </div>
+              </div>
+
+              <div class="dashboard__grid">
+                <div class="card card--accent">
+                  <div class="card__label">Operating</div>
+                  <div class="card__val">$12.84M</div>
+                  <div class="card__sub">USD &middot; ****8421</div>
+                </div>
+                <div class="card">
+                  <div class="card__label">Treasury &middot; T-Bills</div>
+                  <div class="card__val">$31.20M</div>
+                  <div class="card__sub muted-up">+4.92% APY</div>
+                </div>
+                <div class="card">
+                  <div class="card__label">Payroll</div>
+                  <div class="card__val">$4.20M</div>
+                  <div class="card__sub">USD &middot; ****1183</div>
+                </div>
+              </div>
+
+              <div class="ledger">
+                <div class="ledger__row ledger__row--head">
+                  <span>Activity</span>
+                  <span>Counterparty</span>
+                  <span>Method</span>
+                  <span class="right">Amount</span>
+                </div>
+                <div class="ledger__row">
+                  <span>
+                    <span class="dot dot--green"></span>
+                    Inflow &middot; today
+                  </span>
+                  <span>Sequoia Capital</span>
+                  <span class="mono">Wire</span>
+                  <span class="right pos">+ $4,000,000.00</span>
+                </div>
+                <div class="ledger__row">
+                  <span>
+                    <span class="dot dot--violet"></span>
+                    Card &middot; 11:42
+                  </span>
+                  <span>AWS &middot; us-east-1</span>
+                  <span class="mono">Visa ••8842</span>
+                  <span class="right">&minus; $18,402.55</span>
+                </div>
+                <div class="ledger__row">
+                  <span>
+                    <span class="dot dot--amber"></span>
+                    Payroll run
+                  </span>
+                  <span>Gusto Inc.</span>
+                  <span class="mono">ACH</span>
+                  <span class="right">&minus; $812,140.00</span>
+                </div>
+                <div class="ledger__row">
+                  <span>
+                    <span class="dot dot--green"></span>
+                    Yield accrual
+                  </span>
+                  <span>Northwind Treasury</span>
+                  <span class="mono">Auto</span>
+                  <span class="right pos">+ $14,228.91</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trusted by -->
+        <div class="trust" data-reveal>
+          <div class="trust__label">Trusted by the world's most ambitious finance teams</div>
+          <div class="trust__row">
+            <span class="logo">Stripe</span>
+            <span class="logo serif italic">Ramp</span>
+            <span class="logo">LINEAR</span>
+            <span class="logo">Notion</span>
+            <span class="logo serif">Vercel</span>
+            <span class="logo">Anthropic</span>
+            <span class="logo">Figma</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== Live ticker ============== -->
+      <section class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <div class="ticker__item"><span class="ticker__sym">USD/EUR</span> 1.0842 <span class="pos">+0.12%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">SPX</span> 5,318.14 <span class="pos">+0.48%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">BTC</span> 71,402.50 <span class="neg">&minus;1.04%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">UST 10Y</span> 4.28% <span class="pos">+2 bps</span></div>
+          <div class="ticker__item"><span class="ticker__sym">USD/GBP</span> 0.7894 <span class="neg">&minus;0.05%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">ETH</span> 3,712.00 <span class="pos">+0.92%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">VIX</span> 13.41 <span class="neg">&minus;3.10%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">NDX</span> 18,712.30 <span class="pos">+0.67%</span></div>
+          <!-- duplicate for seamless scroll -->
+          <div class="ticker__item"><span class="ticker__sym">USD/EUR</span> 1.0842 <span class="pos">+0.12%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">SPX</span> 5,318.14 <span class="pos">+0.48%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">BTC</span> 71,402.50 <span class="neg">&minus;1.04%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">UST 10Y</span> 4.28% <span class="pos">+2 bps</span></div>
+          <div class="ticker__item"><span class="ticker__sym">USD/GBP</span> 0.7894 <span class="neg">&minus;0.05%</span></div>
+          <div class="ticker__item"><span class="ticker__sym">ETH</span> 3,712.00 <span class="pos">+0.92%</span></div>
+        </div>
+      </section>
+
+      <!-- ============== Stats ============== -->
+      <section class="stats" id="platform">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <div class="eyebrow">By the numbers</div>
+            <h2 class="section-title">
+              The reserve currency of <span class="serif italic accent">operational finance.</span>
+            </h2>
+          </div>
+          <div class="stats__grid">
+            <div class="stat" data-reveal>
+              <div class="stat__val">$184<span class="stat__unit">B</span></div>
+              <div class="stat__label">Annualized payment volume</div>
+            </div>
+            <div class="stat" data-reveal>
+              <div class="stat__val">99.999<span class="stat__unit">%</span></div>
+              <div class="stat__label">Platform uptime, last 12 months</div>
+            </div>
+            <div class="stat" data-reveal>
+              <div class="stat__val">42<span class="stat__unit">ms</span></div>
+              <div class="stat__label">Median API response</div>
+            </div>
+            <div class="stat" data-reveal>
+              <div class="stat__val">120<span class="stat__unit">+</span></div>
+              <div class="stat__label">Markets &middot; 38 currencies</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== Feature bento ============== -->
+      <section class="features" id="products">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <div class="eyebrow">One platform</div>
+            <h2 class="section-title">
+              Every primitive your finance team needs &mdash;
+              <span class="serif italic accent">composable, by design.</span>
+            </h2>
+            <p class="section-sub">
+              Replace a stack of disconnected tools with a single, programmable
+              ledger. Move money, issue cards, manage treasury, and close the
+              books &mdash; without rebuilding what already works.
+            </p>
+          </div>
+
+          <div class="bento">
+            <!-- Banking -->
+            <article class="bento__cell bento__cell--lg" data-reveal>
+              <div class="bento__copy">
+                <div class="bento__eyebrow">
+                  <span class="bento__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7M5 9v11h14V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Business banking
+                </div>
+                <h3 class="bento__title">Checking &amp; savings, reimagined.</h3>
+                <p class="bento__desc">
+                  FDIC-insured to $5M across our partner-bank sweep network.
+                  Earn 4.9% APY on idle balances. Unlimited sub-accounts, with
+                  routing &amp; account numbers in seconds.
+                </p>
+              </div>
+              <div class="bento__art">
+                <div class="account-card">
+                  <div class="account-card__top">
+                    <span class="account-card__tag">Operating</span>
+                    <span class="account-card__apy">4.92% APY</span>
+                  </div>
+                  <div class="account-card__num">$12,841,920.18</div>
+                  <div class="account-card__meta">
+                    <span>Routing 021000089</span>
+                    <span>Acct ••8421</span>
+                  </div>
+                </div>
+                <div class="account-card account-card--mini">
+                  <div class="account-card__num">$4.20M</div>
+                  <div class="account-card__meta"><span>Payroll</span><span>••1183</span></div>
+                </div>
+                <div class="account-card account-card--mini account-card--alt">
+                  <div class="account-card__num">$31.20M</div>
+                  <div class="account-card__meta"><span>Treasury</span><span>T-Bills</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Cards -->
+            <article class="bento__cell" data-reveal>
+              <div class="bento__copy">
+                <div class="bento__eyebrow">
+                  <span class="bento__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/></svg>
+                  </span>
+                  Corporate cards
+                </div>
+                <h3 class="bento__title">Cards with policy built in.</h3>
+                <p class="bento__desc">
+                  Issue physical and virtual cards in seconds. Spend rules that
+                  enforce themselves at swipe time.
+                </p>
+              </div>
+              <div class="bento__art bento__art--card">
+                <div class="credit-card">
+                  <div class="credit-card__brand">Northwind</div>
+                  <div class="credit-card__chip"></div>
+                  <div class="credit-card__num">5412&nbsp;&nbsp;88••&nbsp;&nbsp;••••&nbsp;&nbsp;8421</div>
+                  <div class="credit-card__row">
+                    <span>ATLAS ROBOTICS</span>
+                    <span>VISA</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Treasury -->
+            <article class="bento__cell" data-reveal>
+              <div class="bento__copy">
+                <div class="bento__eyebrow">
+                  <span class="bento__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 6h7v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Treasury
+                </div>
+                <h3 class="bento__title">Make your cash work harder.</h3>
+                <p class="bento__desc">
+                  Allocate to US Treasuries, money markets, and managed
+                  portfolios. Auto-sweep with thresholds you define.
+                </p>
+              </div>
+              <div class="bento__art bento__art--rings">
+                <div class="ring-stat">
+                  <svg viewBox="0 0 120 120" width="120" height="120">
+                    <circle cx="60" cy="60" r="46" fill="none" stroke="#1a2030" stroke-width="10"/>
+                    <circle class="ring-stat__arc" cx="60" cy="60" r="46" fill="none" stroke="url(#cl)" stroke-width="10" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="60" transform="rotate(-90 60 60)"/>
+                  </svg>
+                  <div class="ring-stat__val">4.92<span>%</span></div>
+                  <div class="ring-stat__label">Blended APY</div>
+                </div>
+                <ul class="alloc">
+                  <li><span class="alloc__dot" style="background:#00d68f"></span>T-Bills <span class="alloc__pct">62%</span></li>
+                  <li><span class="alloc__dot" style="background:#7c5cff"></span>MMF <span class="alloc__pct">28%</span></li>
+                  <li><span class="alloc__dot" style="background:#26ffd0"></span>Cash <span class="alloc__pct">10%</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- AI Copilot -->
+            <article class="bento__cell bento__cell--lg" data-reveal>
+              <div class="bento__copy">
+                <div class="bento__eyebrow">
+                  <span class="bento__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/></svg>
+                  </span>
+                  Northwind AI
+                </div>
+                <h3 class="bento__title">A copilot that closes the books.</h3>
+                <p class="bento__desc">
+                  Ask anything &mdash; runway, vendor anomalies, FX exposure.
+                  Northwind AI is grounded in your live ledger, with audit-grade
+                  citations on every answer.
+                </p>
+              </div>
+              <div class="bento__art bento__art--chat">
+                <div class="chat">
+                  <div class="chat__msg chat__msg--user">
+                    What&rsquo;s our runway if we double sales hires in Q3?
+                  </div>
+                  <div class="chat__msg chat__msg--ai">
+                    <div class="chat__ai-row">
+                      <span class="chat__ai-badge">N</span>
+                      <span>Northwind AI</span>
+                    </div>
+                    Doubling sales hires (28 → 56) raises monthly burn to
+                    <strong>$3.41M</strong>. With current reserves of
+                    <strong>$48.2M</strong> and projected ARR growth,
+                    runway becomes <strong>17 months</strong> &mdash; below
+                    your 24-month policy.
+                    <div class="chat__cites">
+                      <span>headcount.csv</span><span>burn-may.xlsx</span><span>policy.md</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Global payments -->
+            <article class="bento__cell" data-reveal>
+              <div class="bento__copy">
+                <div class="bento__eyebrow">
+                  <span class="bento__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.6"/></svg>
+                  </span>
+                  Global payments
+                </div>
+                <h3 class="bento__title">Move money to 120+ markets.</h3>
+                <p class="bento__desc">
+                  Local rails in 38 currencies. Mid-market FX with full
+                  transparency &mdash; no spread games.
+                </p>
+              </div>
+              <div class="bento__art bento__art--fx">
+                <div class="fx-row"><span>USD &rarr; EUR</span><span class="mono">1.0842</span><span class="pos">+0.12%</span></div>
+                <div class="fx-row"><span>USD &rarr; GBP</span><span class="mono">0.7894</span><span class="neg">&minus;0.05%</span></div>
+                <div class="fx-row"><span>USD &rarr; JPY</span><span class="mono">156.21</span><span class="pos">+0.32%</span></div>
+                <div class="fx-row"><span>USD &rarr; SGD</span><span class="mono">1.3402</span><span class="pos">+0.04%</span></div>
+              </div>
+            </article>
+
+            <!-- API -->
+            <article class="bento__cell bento__cell--wide" data-reveal>
+              <div class="bento__copy">
+                <div class="bento__eyebrow">
+                  <span class="bento__icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Developer platform
+                </div>
+                <h3 class="bento__title">An API your engineers will love.</h3>
+                <p class="bento__desc">
+                  REST &amp; gRPC. Idempotent everywhere. Webhooks with
+                  exactly-once semantics. Typed SDKs for TypeScript, Python,
+                  Go, and Ruby.
+                </p>
+              </div>
+              <div class="bento__art bento__art--code">
+                <div class="code">
+                  <div class="code__head">
+                    <span class="code__lang">typescript</span>
+                    <span class="code__file">transfer.ts</span>
+                  </div>
+<pre class="code__body"><span class="t-kw">import</span> { Northwind } <span class="t-kw">from</span> <span class="t-str">"@northwind/sdk"</span>;
+
+<span class="t-kw">const</span> nw = <span class="t-kw">new</span> Northwind({ apiKey: process.env.<span class="t-prop">NW_KEY</span> });
+
+<span class="t-kw">await</span> nw.<span class="t-fn">transfers</span>.<span class="t-fn">create</span>({
+  from: <span class="t-str">"acct_operating"</span>,
+  to:   <span class="t-str">"acct_payroll"</span>,
+  amount: <span class="t-num">812_140_00</span>,   <span class="t-com">// cents</span>
+  currency: <span class="t-str">"USD"</span>,
+  rail: <span class="t-str">"ach_same_day"</span>,
+  idempotencyKey: <span class="t-str">"payroll_2026_05_15"</span>,
+});</pre>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== Workflow ============== -->
+      <section class="workflow">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <div class="eyebrow">From signup to scale</div>
+            <h2 class="section-title">
+              Onboard in minutes. <span class="serif italic accent">Operate for decades.</span>
+            </h2>
+          </div>
+
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <div class="step__num">01</div>
+              <h4 class="step__title">Apply in 8 minutes</h4>
+              <p class="step__desc">
+                Connect your entity, upload formation docs, and verify
+                beneficial owners. Approvals in under a day.
+              </p>
+            </li>
+            <li class="step" data-reveal>
+              <div class="step__num">02</div>
+              <h4 class="step__title">Fund &amp; connect</h4>
+              <p class="step__desc">
+                ACH, wire, or sync existing institutions. Northwind reconciles
+                your historical ledger automatically.
+              </p>
+            </li>
+            <li class="step" data-reveal>
+              <div class="step__num">03</div>
+              <h4 class="step__title">Issue cards &amp; controls</h4>
+              <p class="step__desc">
+                Roll out spend policies, vendor budgets, and approval flows in
+                a single afternoon.
+              </p>
+            </li>
+            <li class="step" data-reveal>
+              <div class="step__num">04</div>
+              <h4 class="step__title">Close in days, not weeks</h4>
+              <p class="step__desc">
+                Push categorized entries to NetSuite, QuickBooks, or Xero.
+                Audit-ready, always.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============== Security ============== -->
+      <section class="security" id="security">
+        <div class="container security__inner">
+          <div data-reveal>
+            <div class="eyebrow">Security &amp; compliance</div>
+            <h2 class="section-title">
+              Institutional-grade, <span class="serif italic accent">by default.</span>
+            </h2>
+            <p class="section-sub">
+              Hardware-backed keys, continuous attestation, and the controls
+              your auditors expect &mdash; without slowing engineers down.
+            </p>
+            <ul class="checks">
+              <li><span class="check">&check;</span> SOC 2 Type II &middot; ISO 27001 &middot; PCI DSS Level 1</li>
+              <li><span class="check">&check;</span> Funds held at FDIC-insured partner banks ($5M sweep)</li>
+              <li><span class="check">&check;</span> Hardware-isolated key custody (HSM, FIPS 140-3)</li>
+              <li><span class="check">&check;</span> SCIM provisioning, SSO/SAML, fine-grained RBAC</li>
+              <li><span class="check">&check;</span> Real-time anomaly detection on every transfer</li>
+            </ul>
+          </div>
+          <aside class="security__shield" data-reveal>
+            <div class="shield">
+              <svg viewBox="0 0 200 220" width="180" height="200" aria-hidden="true">
+                <defs>
+                  <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#26ffd0"/>
+                    <stop offset="100%" stop-color="#00d68f"/>
+                  </linearGradient>
+                </defs>
+                <path d="M100 8 L188 38 V108 C188 158 148 196 100 212 C52 196 12 158 12 108 V38 Z" fill="none" stroke="url(#sg)" stroke-width="1.5" opacity="0.7"/>
+                <path d="M100 28 L168 52 V108 C168 148 138 178 100 192 C62 178 32 148 32 108 V52 Z" fill="none" stroke="#1f2a3a" stroke-width="1"/>
+                <path d="M70 110 l20 22 l44 -52" fill="none" stroke="url(#sg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="shield__badges">
+                <span>SOC 2</span><span>ISO 27001</span><span>PCI L1</span><span>GDPR</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============== Testimonials ============== -->
+      <section class="quotes" id="customers">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <div class="eyebrow">Operators in good company</div>
+            <h2 class="section-title">
+              The finance stack behind <span class="serif italic accent">category-defining companies.</span>
+            </h2>
+          </div>
+
+          <div class="quotes__grid">
+            <figure class="quote" data-reveal>
+              <blockquote>
+                &ldquo;We replaced four vendors with Northwind in a single
+                quarter. Our monthly close went from 11 days to 3.&rdquo;
+              </blockquote>
+              <figcaption>
+                <div class="avatar avatar--1">EM</div>
+                <div>
+                  <div class="quote__name">Elena Marquez</div>
+                  <div class="quote__role">CFO, Atlas Robotics</div>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="quote" data-reveal>
+              <blockquote>
+                &ldquo;The API is genuinely a joy. We built our entire money
+                movement layer on Northwind in under three weeks.&rdquo;
+              </blockquote>
+              <figcaption>
+                <div class="avatar avatar--2">JT</div>
+                <div>
+                  <div class="quote__name">Jordan Tran</div>
+                  <div class="quote__role">VP Engineering, Lumen Health</div>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="quote" data-reveal>
+              <blockquote>
+                &ldquo;Treasury yield on our $80M reserve now funds half our
+                ops budget. It&rsquo;s a different way of running a company.&rdquo;
+              </blockquote>
+              <figcaption>
+                <div class="avatar avatar--3">SP</div>
+                <div>
+                  <div class="quote__name">Sana Patel</div>
+                  <div class="quote__role">CEO, Northstar Labs</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== Pricing ============== -->
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <div class="eyebrow">Pricing</div>
+            <h2 class="section-title">
+              Transparent. <span class="serif italic accent">Aligned with your growth.</span>
+            </h2>
+            <p class="section-sub">No minimums. No hidden FX spread. No surprise fees.</p>
+          </div>
+
+          <div class="plans">
+            <article class="plan" data-reveal>
+              <div class="plan__name">Starter</div>
+              <div class="plan__price">$0<span>/mo</span></div>
+              <div class="plan__sub">For early-stage teams under $10M ARR.</div>
+              <ul class="plan__list">
+                <li>Unlimited US accounts</li>
+                <li>5 free wires / month</li>
+                <li>Up to 25 corporate cards</li>
+                <li>Standard treasury (3.8% APY)</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#start" class="btn btn--ghost btn--full">Start free</a>
+            </article>
+
+            <article class="plan plan--featured" data-reveal>
+              <div class="plan__ribbon">Most popular</div>
+              <div class="plan__name">Growth</div>
+              <div class="plan__price">$499<span>/mo</span></div>
+              <div class="plan__sub">For scaling finance teams that need power and policy.</div>
+              <ul class="plan__list">
+                <li>Everything in Starter</li>
+                <li>Unlimited wires &amp; ACH</li>
+                <li>Unlimited cards with policy engine</li>
+                <li>Treasury at 4.92% blended APY</li>
+                <li>Northwind AI copilot</li>
+                <li>Priority support &middot; 4h SLA</li>
+              </ul>
+              <a href="#start" class="btn btn--primary btn--full">Start 30-day trial</a>
+            </article>
+
+            <article class="plan" data-reveal>
+              <div class="plan__name">Enterprise</div>
+              <div class="plan__price">Custom</div>
+              <div class="plan__sub">Multi-entity, global, and audit-grade by default.</div>
+              <ul class="plan__list">
+                <li>Everything in Growth</li>
+                <li>Multi-entity &amp; intercompany</li>
+                <li>Custom treasury mandates</li>
+                <li>SSO/SAML, SCIM, RBAC</li>
+                <li>Dedicated solutions architect</li>
+                <li>99.99% uptime SLA</li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost btn--full">Talk to sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== CTA ============== -->
+      <section class="cta" id="start">
+        <div class="container cta__inner" data-reveal>
+          <h2 class="cta__title">
+            The future of finance is <span class="serif italic accent">operational.</span>
+          </h2>
+          <p class="cta__sub">
+            Join thousands of teams running on Northwind. Open an account in
+            under 10 minutes &mdash; no card required.
+          </p>
+          <div class="cta__row">
+            <a href="#signup" class="btn btn--primary btn--lg">
+              Open an account
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost btn--lg">Talk to our team</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== Footer ============== -->
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__brand">
+            <a href="#" class="nav__brand" aria-label="Northwind home">
+              <span class="nav__logo">
+                <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+                  <rect width="32" height="32" rx="8" fill="url(#lg)" />
+                  <path d="M9 22V10h2.4l9.2 8.2V10H23v12h-2.4l-9.2-8.2V22z" fill="#061117" />
+                </svg>
+              </span>
+              <span class="nav__word">Northwind</span>
+            </a>
+            <p class="footer__tag">The operating system for modern finance.</p>
+            <div class="footer__legal-row">
+              <span>SOC 2</span><span>ISO 27001</span><span>PCI DSS L1</span><span>FDIC</span>
+            </div>
+          </div>
+
+          <div class="footer__cols">
+            <div>
+              <div class="footer__h">Platform</div>
+              <a href="#">Banking</a>
+              <a href="#">Cards</a>
+              <a href="#">Treasury</a>
+              <a href="#">Payments</a>
+              <a href="#">Northwind AI</a>
+            </div>
+            <div>
+              <div class="footer__h">Developers</div>
+              <a href="#">API docs</a>
+              <a href="#">SDKs</a>
+              <a href="#">Status</a>
+              <a href="#">Changelog</a>
+            </div>
+            <div>
+              <div class="footer__h">Company</div>
+              <a href="#">About</a>
+              <a href="#">Customers</a>
+              <a href="#">Careers</a>
+              <a href="#">Press</a>
+            </div>
+            <div>
+              <div class="footer__h">Legal</div>
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+              <a href="#">Disclosures</a>
+              <a href="#">Security</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom container">
+          <span>&copy; 2026 Northwind Financial, Inc.</span>
+          <span class="footer__fine">
+            Banking services provided by partner banks, Members FDIC. Investment
+            products are not FDIC insured, are not bank guaranteed, and may lose
+            value.
+          </span>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
