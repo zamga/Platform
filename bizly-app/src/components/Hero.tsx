@@ -3,7 +3,7 @@ import { HeroCards } from "./HeroCards"
 
 export function Hero() {
   return (
-    <section className="rounded-[var(--radius-shell)] bg-[#f5f5f5] p-6 lg:p-10">
+    <section className="rounded-3xl bg-[#f5f5f5] p-4 sm:rounded-[var(--radius-shell)] sm:p-6 lg:p-10">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3.5 py-1.5 text-xs font-medium text-neutral-600 shadow-sm">
@@ -11,7 +11,7 @@ export function Hero() {
             AI-powered intelligence · v2.0 live
           </div>
 
-          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-neutral-400 sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="text-[1.75rem] font-bold leading-[1.12] tracking-tight text-neutral-400 sm:text-4xl sm:text-5xl lg:text-[3.25rem]">
             Know any company or person{" "}
             <span className="text-black">before</span> you trust them.
           </h1>
