@@ -1,12 +1,16 @@
 # Bizly.ai Landing Page
 
-View the live page on your phone (pick one):
+## View on your phone (tap this)
 
-1. **jsDelivr (works immediately after push)**  
-   https://cdn.jsdelivr.net/gh/zamga/Platform@main/docs/index.html
+**https://htmlpreview.github.io/?https://raw.githubusercontent.com/zamga/Platform/main/docs/index.html**
 
-2. **GitHub Pages** (enable once: Repo → Settings → Pages → Source: **GitHub Actions**)  
-   https://zamga.github.io/Platform/
+Works immediately — no install, no GitHub Pages setup.
+
+## Permanent hosting (optional)
+
+In GitHub: **Settings → Pages → Build from branch → `main` → `/docs` → Save**
+
+Then use: **https://zamga.github.io/Platform/**
 
 ## Develop locally
 
@@ -14,4 +18,12 @@ View the live page on your phone (pick one):
 cd bizly-app
 npm install
 npm run dev
+```
+
+Rebuild the mobile-friendly single file:
+
+```bash
+cd bizly-app
+npm run build:single
+cp dist/index.html ../docs/index.html
 ```
