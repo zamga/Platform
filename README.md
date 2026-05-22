@@ -1,19 +1,17 @@
 # Bizly.ai Landing Page
 
-AI-powered business intelligence landing page built from the Bizly.ai UI design.
+View the live page on your phone (pick one):
 
-## Quick start
+1. **jsDelivr (works immediately after push)**  
+   https://cdn.jsdelivr.net/gh/zamga/Platform@main/docs/index.html
+
+2. **GitHub Pages** (enable once: Repo → Settings → Pages → Source: **GitHub Actions**)  
+   https://zamga.github.io/Platform/
+
+## Develop locally
 
 ```bash
 cd bizly-app
 npm install
 npm run dev
 ```
-
-Open [http://localhost:5173](http://localhost:5173) to view the page.
-
-## Stack
-
-- React 19 + TypeScript
-- Vite
-- Tailwind CSS v4
