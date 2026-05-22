@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.GITHUB_PAGES === "true" ? "/Platform/" : "/",
+  // Relative base so assets load on github.io/Platform/ without broken paths
+  base: process.env.GITHUB_PAGES === "true" ? "./" : "/",
 })
