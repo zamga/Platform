@@ -1,4 +1,4 @@
-name: Deploy Bizly landing to GitHub Pages
+name: Deploy BERGWEISS site to GitHub Pages
 
 on:
   push:
