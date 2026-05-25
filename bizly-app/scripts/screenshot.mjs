@@ -7,7 +7,8 @@ const browser = await chromium.launch()
 const iphone = devices["iPhone 14 Pro"]
 const context = await browser.newContext({ ...iphone })
 const page = await context.newPage()
-await page.goto("http://127.0.0.1:5173", { waitUntil: "networkidle" })
+await page.goto("http://127.0.0.1:5173", { waitUntil: "load" })
+await page.waitForTimeout(1500)
 await page.screenshot({
   path: "/opt/cursor/artifacts/screenshots/bizly-mobile.png",
   fullPage: true,
@@ -15,7 +16,8 @@ await page.screenshot({
 
 const desktop = await browser.newContext({ viewport: { width: 1440, height: 900 } })
 const dpage = await desktop.newPage()
-await dpage.goto("http://127.0.0.1:5173", { waitUntil: "networkidle" })
+await dpage.goto("http://127.0.0.1:5173", { waitUntil: "load" })
+await dpage.waitForTimeout(1500)
 await dpage.screenshot({
   path: "/opt/cursor/artifacts/screenshots/bizly-desktop.png",
   fullPage: true,

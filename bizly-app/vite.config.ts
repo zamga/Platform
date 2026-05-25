@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import { viteSingleFile } from 'vite-plugin-singlefile'
 
 const singleFile = process.env.SINGLE_FILE === 'true'
@@ -8,7 +7,6 @@ const singleFile = process.env.SINGLE_FILE === 'true'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
     ...(singleFile ? [viteSingleFile()] : []),
   ],
   base: singleFile ? './' : process.env.GITHUB_PAGES === 'true' ? './' : '/',
