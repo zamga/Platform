@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react"
 import { LiquidCore } from "../components/LiquidCore"
 import { MetricsLedger } from "../components/MetricsLedger"
 import { Tombstones } from "../components/Tombstones"
@@ -7,6 +8,8 @@ import { DemoForm } from "../components/DemoForm"
 import { ServiceTile, SituationCard, MemoCard, ProfileCard } from "../components/cards"
 import { SERVICES, SITUATIONS, INSIGHTS, PROFILES, CITY_RAIL } from "../content/data"
 import { usePrefersReducedMotion } from "../effects/usePrefersReducedMotion"
+
+const CapitalCore3D = lazy(() => import("../components/CapitalCore3D"))
 
 export default function HomePage() {
   const reduced = usePrefersReducedMotion()
@@ -49,7 +52,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-globe">
-            <LiquidCore />
+            <Suspense fallback={<LiquidCore />}>
+              <CapitalCore3D />
+            </Suspense>
           </div>
         </div>
       </section>

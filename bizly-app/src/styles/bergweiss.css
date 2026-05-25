@@ -328,3 +328,7 @@ main:focus{outline:none;}
 .related-copy{grid-column:1 / 8;display:grid;gap:var(--space-s);align-content:start;}
 .stacked-actions{align-content:start;}
 @media(max-width:1080px){.related-copy{grid-column:1 / -1;}}
+
+/* ===== WebGL capital core canvas ===== */
+.liquid-core-canvas{position:absolute !important;inset:0;z-index:1;touch-action:pan-y;}
+.liquid-core-shell .liquid-core-badge,.liquid-core-shell .liquid-core-caption{z-index:4;}

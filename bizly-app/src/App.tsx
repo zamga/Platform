@@ -9,23 +9,25 @@ import { SeoHead } from "./components/SeoHead"
 import { usePrefersReducedMotion } from "./effects/usePrefersReducedMotion"
 import { useScrollProgress } from "./effects/useScrollProgress"
 import { useRevealOnScroll } from "./effects/useRevealOnScroll"
+import { useSmoothScroll } from "./effects/useSmoothScroll"
 
 export default function App() {
   const { slug } = useHashRoute()
   const route = routeForSlug(slug)
   const reduced = usePrefersReducedMotion()
 
+  const scrollToTop = useSmoothScroll(reduced)
   useScrollProgress()
   useRevealOnScroll(slug, reduced)
 
   // Scroll to top + brief route-transition motion on navigation.
   useEffect(() => {
-    window.scrollTo(0, 0)
+    scrollToTop()
     if (reduced) return
     document.body.classList.add("soty-route-transition")
     const t = window.setTimeout(() => document.body.classList.remove("soty-route-transition"), 260)
     return () => window.clearTimeout(t)
-  }, [slug, reduced])
+  }, [slug, reduced, scrollToTop])
 
   return (
     <>
