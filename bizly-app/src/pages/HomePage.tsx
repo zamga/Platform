@@ -1,5 +1,3 @@
-import { lazy, Suspense } from "react"
-import { LiquidCore } from "../components/LiquidCore"
 import { MetricsLedger } from "../components/MetricsLedger"
 import { Tombstones } from "../components/Tombstones"
 import { ContentImage } from "../components/ContentImage"
@@ -9,8 +7,6 @@ import { ServiceTile, SituationCard, MemoCard, ProfileCard } from "../components
 import { SERVICES, SITUATIONS, INSIGHTS, PROFILES, CITY_RAIL } from "../content/data"
 import { usePrefersReducedMotion } from "../effects/usePrefersReducedMotion"
 
-const CapitalCore3D = lazy(() => import("../components/CapitalCore3D"))
-
 export default function HomePage() {
   const reduced = usePrefersReducedMotion()
   return (
@@ -19,42 +15,38 @@ export default function HomePage() {
         <div className="container-premium grid-premium hero-grid">
           <div className="hero-copy">
             <p className="kicker reveal">BERGWEISS / Corporate Finance</p>
-            <h1 className="display reveal">
-              Global<br />
-              advisory.
-            </h1>
+            <h1 className="display reveal">Independent advice for consequential decisions.</h1>
             <p className="deck reveal">
-              Independent corporate finance and private capital advisory for owners, boards, founders, family offices
-              and investors facing consequential decisions.
+              A corporate finance and private capital advisory house for owners, boards, founders, family offices and
+              investors — where discretion shapes value.
             </p>
             <div className="cta-row reveal">
               <RouteLink to="capabilities" className="button accent interactive">
                 Explore capabilities
               </RouteLink>
-              <RouteLink to="subscribe" className="button interactive">
-                Subscribe to insights
+              <RouteLink to="transactions" className="button interactive">
+                Selected engagements
               </RouteLink>
             </div>
-            <div className="hero-ledger reveal">
+            <div className="hero-rule reveal">
               <div>
-                <p className="kicker">What we do</p>
-                <p className="micro">
-                  M&A Advisory · Capital Solutions · Private Capital · Restructuring · Board Advisory · Special
-                  Situations
-                </p>
+                <p className="num">6</p>
+                <p className="kicker">Disciplines</p>
               </div>
               <div>
-                <p className="kicker">What we publish</p>
-                <p className="micro">
-                  Research notes, film briefings, market observations and selected institutional commentary.
-                </p>
+                <p className="num">7</p>
+                <p className="kicker">Financial centres</p>
+              </div>
+              <div>
+                <p className="num">1</p>
+                <p className="kicker">Senior contact</p>
               </div>
             </div>
           </div>
-          <div className="hero-globe">
-            <Suspense fallback={<LiquidCore />}>
-              <CapitalCore3D />
-            </Suspense>
+          <div className="hero-portrait reveal">
+            <div className="photo-frame portrait">
+              <ContentImage img="glassTowers" eager />
+            </div>
           </div>
         </div>
       </section>

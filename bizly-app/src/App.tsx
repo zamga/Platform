@@ -3,8 +3,6 @@ import { useHashRoute } from "./router/useHashRoute"
 import { routeForSlug } from "./content/routes"
 import { Navbar } from "./components/Navbar"
 import { Footer } from "./components/Footer"
-import { SpatialCanvas } from "./components/SpatialCanvas"
-import { SoundToggle } from "./components/SoundToggle"
 import { SeoHead } from "./components/SeoHead"
 import { usePrefersReducedMotion } from "./effects/usePrefersReducedMotion"
 import { useScrollProgress } from "./effects/useScrollProgress"
@@ -25,7 +23,7 @@ export default function App() {
     scrollToTop()
     if (reduced) return
     document.body.classList.add("soty-route-transition")
-    const t = window.setTimeout(() => document.body.classList.remove("soty-route-transition"), 260)
+    const t = window.setTimeout(() => document.body.classList.remove("soty-route-transition"), 240)
     return () => window.clearTimeout(t)
   }, [slug, reduced, scrollToTop])
 
@@ -34,7 +32,6 @@ export default function App() {
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <SpatialCanvas group={route.group} reducedMotion={reduced} />
       <div className="progress" aria-hidden="true" />
       <Navbar slug={slug} />
       <main id="main" tabIndex={-1}>
@@ -42,7 +39,6 @@ export default function App() {
         {route.element}
       </main>
       <Footer />
-      <SoundToggle />
     </>
   )
 }
