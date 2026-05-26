@@ -33,6 +33,7 @@ export default function App() {
         Skip to content
       </a>
       <div className="progress" aria-hidden="true" />
+      <div className="route-veil" aria-hidden="true" />
       <Navbar slug={slug} />
       <main id="main" tabIndex={-1}>
         <SeoHead title={route.title} description={route.description} />

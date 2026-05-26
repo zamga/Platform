@@ -1,5 +1,6 @@
 import { RouteLink } from "./RouteLink"
 import { DemoForm } from "./DemoForm"
+import { Disclosure } from "./Disclosure"
 
 const COLUMNS: { heading: string; links: { to: string; label: string }[] }[] = [
   {
@@ -50,6 +51,7 @@ const COLUMNS: { heading: string; links: { to: string; label: string }[] }[] = [
 export function Footer() {
   return (
     <footer className="site-footer band-ink">
+      <Disclosure />
       <div className="container-premium footer-grid">
         <div>
           <p className="brand">BERGWEISS</p>
