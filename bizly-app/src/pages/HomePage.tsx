@@ -3,6 +3,7 @@ import { Tombstones } from "../components/Tombstones"
 import { ContentImage } from "../components/ContentImage"
 import { RouteLink } from "../components/RouteLink"
 import { DemoForm } from "../components/DemoForm"
+import { HeroCanvas } from "../components/HeroCanvas"
 import { ServiceTile, SituationCard, MemoCard, ProfileCard } from "../components/cards"
 import { SERVICES, SITUATIONS, INSIGHTS, PROFILES, CITY_RAIL } from "../content/data"
 import { usePrefersReducedMotion } from "../effects/usePrefersReducedMotion"
@@ -11,44 +12,46 @@ export default function HomePage() {
   const reduced = usePrefersReducedMotion()
   return (
     <>
-      <section className="home-hero">
-        <div className="container-premium grid-premium hero-grid">
-          <div className="hero-copy">
-            <p className="kicker reveal">BERGWEISS / Corporate Finance</p>
-            <h1 className="display reveal">Independent advice for consequential decisions.</h1>
-            <p className="deck reveal">
-              A corporate finance and private capital advisory house for owners, boards, founders, family offices and
-              investors — where discretion shapes value.
-            </p>
-            <div className="cta-row reveal">
-              <RouteLink to="capabilities" className="button accent interactive">
-                Explore capabilities
-              </RouteLink>
-              <RouteLink to="transactions" className="button interactive">
-                Selected engagements
-              </RouteLink>
-            </div>
-            <div className="hero-rule reveal">
-              <div>
-                <p className="num">6</p>
-                <p className="kicker">Disciplines</p>
-              </div>
-              <div>
-                <p className="num">7</p>
-                <p className="kicker">Financial centres</p>
-              </div>
-              <div>
-                <p className="num">1</p>
-                <p className="kicker">Senior contact</p>
-              </div>
-            </div>
+      <section className="hero-immersive" aria-label="Introduction">
+        <HeroCanvas reduced={reduced} />
+        <div className="hero-immersive-veil" aria-hidden="true" />
+        <div className="hero-immersive-inner container-premium">
+          <p className="kicker hero-kicker reveal">BERGWEISS — Corporate Finance &amp; Private Capital</p>
+          <h1 className="hero-display reveal">
+            Independent advice for
+            <span className="hero-display-accent"> consequential decisions.</span>
+          </h1>
+          <p className="hero-deck reveal">
+            An advisory house for owners, boards, founders, family offices and investors — where capital, judgment and
+            discretion meet at the moments that matter most.
+          </p>
+          <div className="cta-row reveal">
+            <RouteLink to="capabilities" className="button accent interactive">
+              Explore capabilities
+            </RouteLink>
+            <RouteLink to="transactions" className="button interactive">
+              Selected engagements
+            </RouteLink>
           </div>
-          <div className="hero-portrait reveal">
-            <div className="photo-frame portrait">
-              <ContentImage img="glassTowers" eager />
+          <dl className="hero-stat-rule reveal">
+            <div>
+              <dt className="micro hero-stat-label">Disciplines</dt>
+              <dd className="hero-stat-num">06</dd>
             </div>
-          </div>
+            <div>
+              <dt className="micro hero-stat-label">Financial centres</dt>
+              <dd className="hero-stat-num">07</dd>
+            </div>
+            <div>
+              <dt className="micro hero-stat-label">Senior contact</dt>
+              <dd className="hero-stat-num">01</dd>
+            </div>
+          </dl>
         </div>
+        <span className="hero-scroll-cue" aria-hidden="true">
+          <span className="hero-scroll-word">Scroll</span>
+          <span className="hero-scroll-line" />
+        </span>
       </section>
 
       <MetricsLedger reducedMotion={reduced} />
