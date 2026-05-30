@@ -13,7 +13,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="section band-night contact">
-      <div className="container contact-grid">
+      <div className="container grid contact-grid">
         <div className="contact-copy">
           <p className="kicker reveal">{CONTACT.kicker}</p>
           <h2 className="h2 reveal" data-delay="1">

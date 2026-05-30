@@ -21,9 +21,12 @@ export function Nav({ isHome }: { isHome: boolean }) {
   const close = () => setMenuOpen(false)
 
   const brandHref = isHome ? "#top" : "#/"
+  // Solid (dark) bar whenever we're not sitting over the dark hero — i.e. once
+  // scrolled, or on any non-home route whose page starts on a light band.
+  const solid = scrolled || !isHome
 
   return (
-    <header className={`nav ${scrolled ? "is-scrolled" : ""}`}>
+    <header className={`nav ${solid ? "is-scrolled" : ""}`}>
       <div className="container nav-inner">
         <a href={brandHref} className="brand" onClick={close} aria-label={`${BRAND.name} — home`}>
           <span className="brand-mark">

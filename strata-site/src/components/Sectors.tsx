@@ -3,7 +3,7 @@ import { SECTORS } from "../content/site"
 export function Sectors() {
   return (
     <section className="section band-paper sectors">
-      <div className="container sectors-grid">
+      <div className="container grid sectors-grid">
         <div className="sectors-copy">
           <p className="kicker reveal">{SECTORS.kicker}</p>
           <h2 className="h2 reveal" data-delay="1">

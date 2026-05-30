@@ -3,7 +3,7 @@ import { APPROACH } from "../content/site"
 export function Approach() {
   return (
     <section id="approach" className="section band-paper approach">
-      <div className="container approach-grid">
+      <div className="container grid approach-grid">
         <div className="approach-aside">
           <div className="approach-sticky">
             <p className="kicker reveal">{APPROACH.kicker}</p>

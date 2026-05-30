@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# STRATA — Corporate Finance & Capital Advisory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An award-grade, single-page marketing site for a fictional independent corporate
+finance house. Built fresh with **React 19 + Vite + TypeScript** and an authored CSS
+design system.
 
-Currently, two official plugins are available:
+This is a **standalone product** — it shares no code with anything else in the repo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Design direction
 
-## React Compiler
+The look and motion are modelled on three recent Awwwards-recognised corporate-finance
+sites — **Synthesis Capital** (serious editorial confidence), **Tresmares Capital** (a
+single ownable geological metaphor + scroll-driven motion) and **Hayden Capital**
+(cursor-reactive hero, panel-scroll, border-drawing reveals, data transparency).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Signature elements:
 
-## Expanding the ESLint configuration
+- A cinematic dark hero with a staggered serif type load-in.
+- A bespoke **cursor-reactive topographic "contour" canvas** (the *strata* motif),
+  parallaxing on scroll and bowing toward the pointer — and fully static under
+  `prefers-reduced-motion`.
+- Border-drawing capability cards, a sticky panel-scroll Approach, and animated
+  track-record counters.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Develop
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build / lint
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build   # tsc -b && vite build
+npm run lint
 ```
+
+## Screenshots (Playwright)
+
+With the dev server running:
+
+```bash
+URL=http://127.0.0.1:5173 node scripts/screenshot.mjs
+```
+
+## Layout
+
+- `src/content/site.ts` — all typed site copy.
+- `src/components/` — UI (Nav, Hero, ContourField, Capabilities, Approach, TrackRecord, …).
+- `src/effects/` — reveal-on-scroll, smooth scroll (Lenis), scroll progress, active-section,
+  reduced-motion.
+- `src/index.css` — the authored design system (tokens, type scale, components, motion).
+- `src/pages/` — `HomePage`, `LegalPage`. `#/legal` is the only sub-route; everything else
+  is in-page anchored scroll.

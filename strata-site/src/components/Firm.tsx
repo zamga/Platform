@@ -3,7 +3,7 @@ import { FIRM } from "../content/site"
 export function Firm() {
   return (
     <section id="firm" className="section band-paper firm">
-      <div className="container firm-grid">
+      <div className="container grid firm-grid">
         <div className="firm-copy">
           <p className="kicker reveal">{FIRM.kicker}</p>
           <h2 className="h2 reveal" data-delay="1">
